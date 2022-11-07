@@ -1,3 +1,4 @@
+--100%
 use master 
 go
 drop database if exists CustumeDB
