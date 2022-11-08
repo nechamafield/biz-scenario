@@ -1,3 +1,4 @@
+--please see 2 comments
 /*
     1. I need to know which costume is the most popular.
     2. I need to know which size is the most polpular.
@@ -12,11 +13,13 @@ from costume c
 group by c.CostumeDesc
 order by QuantitySoldPerCostume desc
  
+--why top 2? 
 select top 2 QuantitySoldPerSize = count(c.CostumeSize), c.CostumeSize 
 from Costume c
 group by c.CostumeSize 
 order by QuantitySoldPerSize desc
 
+--leave space between first and last name
 select SpecialFormat = concat(c.CustomerFirstName, '', c.CustomerLastName, ': ', c.AmountBought, ' - ', c.CostumeDesc, ' (', c.TotalPrice, ')')
 from Costume c 
 
