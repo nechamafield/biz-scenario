@@ -1,9 +1,10 @@
+--please see 1 comment
 use CostumeDB 
 go
  
 delete costume
 go
-
+-- If you don't make paidfullprice computed then you need a column here
 insert Costume(CustomerFirstName,CustomerLastName,CostumeDesc,CostumeSize,AmountBought,PurchasePricePer1,SellingPricePer1,DateBought,DateSold)
 select 'Chana', 'Goldberg', 'Artist', 'XS', 2, 15, 20,'2020/02/14', '2020/04/02'
 union select 'Aliza', 'Duetch', 'Fire Man', 'L', 1, 22, 27, '2021/03/09', '2022/01/04'
