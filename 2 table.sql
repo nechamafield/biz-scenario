@@ -28,6 +28,7 @@ create table dbo.Costume(
     DateSold date not null,
     PaidFullPrice bit not null 
     --why default to 1?
+    -- make constraint that if cost and sold price are same then 0 if not 1
         constraint d_Costume_PaidFullPrice default(1),
      --make sure he is not paying cost price, then th ecalculatio will be different
     TotalPrice as SellingPricePer1 * AmountBought persisted ,
